@@ -142,6 +142,8 @@ public class MovieView extends RelativeLayout {
 									mMovieListener.onMovieMinimized();
 								}
 								break;
+							default:
+								break;
 						}
 						// Start or reset the timeout to hide controls
 						if (mMediaPlayer != null) {
