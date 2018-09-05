@@ -481,15 +481,13 @@ public class MovieView extends RelativeLayout {
 
 		@Override
 		public void handleMessage(Message msg) {
-			switch (msg.what) {
-				case MESSAGE_HIDE_CONTROLS:
-					MovieView movieView = mMovieViewRef.get();
-					if (movieView != null) {
-						movieView.hideControls();
-					}
-					break;
-				default:
-					super.handleMessage(msg);
+			if (msg.what == MESSAGE_HIDE_CONTROLS) {
+				MovieView movieView = mMovieViewRef.get();
+				if (movieView != null) {
+					movieView.hideControls();
+				}
+			} else {
+				super.handleMessage(msg);
 			}
 		}
 	}
