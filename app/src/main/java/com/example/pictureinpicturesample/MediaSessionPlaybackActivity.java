@@ -67,10 +67,8 @@ public class MediaSessionPlaybackActivity extends AppCompatActivity {
 			new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-					switch (view.getId()) {
-						case R.id.pip:
-							minimize();
-							break;
+					if (view.getId() == R.id.pip) {
+						minimize();
 					}
 				}
 			};
